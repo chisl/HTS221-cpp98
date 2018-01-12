@@ -96,6 +96,7 @@ public:
 		/* Bits reserved_0: */
 		struct reserved_0
 		{
+			static const uint8_t dflt = 0b00; // 2'b0
 			static const uint8_t mask = 0b11000000; // [6,7]
 		};
 		/* Bits AVGT: */
@@ -162,6 +163,7 @@ public:
 		/* power-down control  */
 		struct PD
 		{
+			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b10000000; // [7]
 			static const uint8_t POWER_DOWN = 0b0; // power-down mode
 			static const uint8_t ACTIVE = 0b1; // active mode
@@ -169,12 +171,14 @@ public:
 		/* Bits reserved_0: */
 		struct reserved_0
 		{
+			static const uint8_t dflt = 0b0000; // 4'b0
 			static const uint8_t mask = 0b01111000; // [3,4,5,6]
 		};
 		/* Bits BDU: */
 		/* block data update  */
 		struct BDU
 		{
+			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00000100; // [2]
 			static const uint8_t CONTINUOUS = 0b0; // continuous update
 			static const uint8_t NOT_UPDATED_UNTIL_READ = 0b1; // output registers not updated until MSB and LSB reading)
@@ -198,6 +202,7 @@ public:
 		 */
 		struct ODR
 		{
+			static const uint8_t dflt = 0b00; // 2'b0
 			static const uint8_t mask = 0b00000011; // [0,1]
 			static const uint8_t ONE_SHOT = 0b00; // 
 			static const uint8_t RATE_1_HZ = 0b01; // 
@@ -242,6 +247,7 @@ public:
 		 */
 		struct BOOT
 		{
+			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b10000000; // [7]
 			static const uint8_t NORMAL_MODE = 0b0; // normal mode
 			static const uint8_t REBOOT_MEMORY = 0b1; // reboot memory content
@@ -249,6 +255,7 @@ public:
 		/* Bits reserved_0: */
 		struct reserved_0
 		{
+			static const uint8_t dflt = 0b00000; // 5'b0
 			static const uint8_t mask = 0b01111100; // [2,3,4,5,6]
 		};
 		/* Bits Heater: */
@@ -263,6 +270,7 @@ public:
 		 */
 		struct Heater
 		{
+			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00000010; // [1]
 			static const uint8_t DISABLE = 0b0; // heater disable
 			static const uint8_t ENABLE = 0b1; // heater enable
@@ -274,6 +282,7 @@ public:
 		 */
 		struct ONE_SHOT_ENABLE
 		{
+			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00000001; // [0]
 			static const uint8_t WAITING = 0b0; // waiting for start of conversion
 			static const uint8_t START = 0b1; // start for a new dataset)
@@ -329,6 +338,7 @@ public:
 		/* Bits reserved_0: */
 		struct reserved_0
 		{
+			static const uint8_t dflt = 0b000; // 3'b0
 			static const uint8_t mask = 0b00111000; // [3,4,5]
 		};
 		/* Bits DRDY_EN: */
@@ -349,6 +359,7 @@ public:
 		/* Bits reserved_1: */
 		struct reserved_1
 		{
+			static const uint8_t dflt = 0b00; // 2'b0
 			static const uint8_t mask = 0b00000011; // [0,1]
 		};
 	};
@@ -385,6 +396,7 @@ public:
 		/* Bits reserved_0: */
 		struct reserved_0
 		{
+			static const uint8_t dflt = 0b000000; // 6'b0
 			static const uint8_t mask = 0b11111100; // [2,3,4,5,6,7]
 		};
 		/* Bits H_DA: */
@@ -395,6 +407,7 @@ public:
 		 */
 		struct H_DA
 		{
+			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00000010; // [1]
 			static const uint8_t NOT_AVAILABLE = 0b0; // new data for humidity is not yet available
 			static const uint8_t AVAILABLE = 0b1; // new data for humidity is available
@@ -407,6 +420,7 @@ public:
 		 */
 		struct T_DA
 		{
+			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00000001; // [0]
 			static const uint8_t NOT_AVAILABLE = 0b0; // new data for temperature is not yet available
 			static const uint8_t AVAILABLE = 0b1; // new data for temperature is available
